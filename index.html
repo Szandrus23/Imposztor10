@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ki az imposztor?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game">
+    <h1>Ki az imposztor?</h1>
+    <div id="player-input">
+      <label for="names">Add meg a játékosok neveit (vesszővel elválasztva):</label><br/>
+      <input type="text" id="names" placeholder="pl. Anna, Bence, Kata" />
+      <button onclick="startGame()">Játék indítása</button>
+    </div>
+
+    <div id="player-list" class="hidden">
+      <h2>Játékosok</h2>
+      <ul id="players"></ul>
+    </div>
+
+    <div id="word-display" class="hidden">
+      <h2 id="current-player-name"></h2>
+      <button onclick="revealWord()">Szó felfedése</button>
+      <p id="word" class="hidden"></p>
+      <button id="next-button" onclick="nextPlayer()" class="hidden">Tovább</button>
+    </div>
+
+    <div id="reveal-impostor" class="hidden">
+      <button onclick="revealImpostor()">Ki volt az imposztor?</button>
+    </div>
+
+    <div id="result" class="hidden">
+      <p id="impostor-result"></p>
+      <button onclick="location.reload()">Új játék</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
